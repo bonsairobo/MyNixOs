@@ -1,0 +1,31 @@
+[init]
+	defaultBranch = main
+[user]
+	email = duncanfairbanks6@gmail.com
+	name = Duncan Fairbanks
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[core]
+	editor = hx
+[credential]
+	helper = store
+
+# Diffs
+[core]
+    pager = delta
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    navigate = true    # use n and N to move between diff sections
+    light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+[merge]
+    conflictstyle = diff3
+[diff]
+    colorMoved = default
+
+# Foresight stuff
+[url "ssh://git@github.com/ForesightMiningSoftwareCorporation"]
+  insteadOf = https://github.com/ForesightMiningSoftwareCorporation

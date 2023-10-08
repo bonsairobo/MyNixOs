@@ -1,0 +1,9 @@
+[battery]
+command=acpi
+label=⚡
+interval=30
+
+[time]
+command=date '+%m-%d %H:%M'
+interval=30
+

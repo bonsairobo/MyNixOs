@@ -225,6 +225,23 @@
     # The home.stateVersion option does not have a default and must be set
     home.stateVersion = "18.09";
 
+    # Link all configuration files (dotfiles) into home.
+    # Strangely, this does not work: https://github.com/nix-community/home-manager/issues/3849
+    # home.file."." = {
+    #   source = ./home;
+    #   recursive = true;
+    # };
+    home.file.".config" = {
+      source = ./home/.config;
+      recursive = true;
+    };
+    home.file.".gitconfig" = {
+      source = ./home/.gitconfig;
+    };
+    home.file.".wezterm.lua" = {
+      source = ./home/.wezterm.lua;
+    };
+
     # Overwrite steam.desktop shortcut so that is uses PRIME
     # offloading for Steam and all its games
     home.activation.steam = lib.hm.dag.entryAfter ["writeBoundary"] ''

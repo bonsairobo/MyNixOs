@@ -1,0 +1,12 @@
+theme = "downtown_funk"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.statusline]
+left = ["mode", "file-name", "version-control"]
+
+[keys.normal]
+D = "delete_selection_noyank"

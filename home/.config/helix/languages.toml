@@ -1,0 +1,13 @@
+[[language]]
+name = "rust"
+
+[language.config.check]
+command = "clippy"
+
+[language.config.cargo]
+features = "all"
+
+[[language]]
+name = "markdown"
+language-server = { command = "/home/duncan/.cargo/bin/mdpls" }
+config = { markdown.preview.auto = true, markdown.preview.browser = "firefox" }
