@@ -133,6 +133,7 @@
     mako
     mcfly
     pamixer
+    pavucontrol
     pciutils
     procs
     ripgrep

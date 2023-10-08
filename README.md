@@ -12,20 +12,27 @@ manager and Wayland compositor.
 For gaming, Steam is installed and the `.desktop` file is modified to force
 using NVIDIA PRIME offloading.
 
-# GUIs you might be missing
-
-There is no graphical login. A `sway` session will be started automatically when
-logging in on TTY1.
-
-Network Manager and `nmcli` are used for networking.
-
-PipeWire is used for audio, and output devices are configured with `pamixer`.
-
 # Installation
 
 ```sh
 nixos-rebuild switch --flake github:bonsairobo/MyNixOs
 ```
+
+# Subsystems
+
+## Login
+
+There is no graphical login. A `sway` session will be started automatically when
+logging in on TTY1.
+
+## Networking
+
+Network Manager and `nmcli` are used for networking.
+
+## Audio
+
+PipeWire + PulseAudio are used for audio, and output devices are configured with
+`pavucontrol`.
 
 # Compatibility
 
