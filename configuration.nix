@@ -158,6 +158,8 @@
     [[ "$(tty)" == /dev/tty1 ]] && sway --unsupported-gpu
   '';
 
+  # Sadly we can't easily install steam on a per-user basis, because installation
+  # requires touching a lot of system libraries, etc.
   programs.steam = {
     enable = true;
     remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
