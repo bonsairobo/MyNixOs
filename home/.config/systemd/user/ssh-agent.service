@@ -7,7 +7,7 @@ Environment=SSH_AUTH_SOCK=%t/ssh-agent.socket
 # DISPLAY required for ssh-askpass to work
 Environment=DISPLAY=:0
 PassEnvironment=SSH_AUTH_SOCK DISPLAY
-ExecStart=/usr/bin/ssh-agent -D -a $SSH_AUTH_SOCK
+ExecStart=/run/current-system/sw/bin/ssh-agent -D -a $SSH_AUTH_SOCK
 
 [Install]
 WantedBy=default.target
