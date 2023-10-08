@@ -186,7 +186,7 @@ bindsym $mod+r mode "resize"
 
 output * bg /home/duncan/Pictures/wallpapers/adventure_souls.jpg fill
 
-font pango:JetBrainsMono 12
+font pango:JetBrainsMonoNerdFont 12
 
 #
 # Status Bar:
