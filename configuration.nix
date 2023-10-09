@@ -234,7 +234,11 @@
 
       # Programming languages
       julia-bin
+
+      # Rust
       rustup
+      clang
+      mold
 
       # Apps
       discord
