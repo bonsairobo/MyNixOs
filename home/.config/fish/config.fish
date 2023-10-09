@@ -22,6 +22,8 @@ if status is-interactive
     end
 end
 
+fish_add_path ~/.cargo/bin
+
 # Aliases
 
 alias ls='lsd'
