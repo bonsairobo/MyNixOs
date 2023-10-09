@@ -184,6 +184,9 @@ bindsym $mod+r mode "resize"
 # Appearance
 #
 
+exec_always dbus-sway-environment
+exec_always configure-gtk
+
 output * bg /home/duncan/Pictures/wallpapers/adventure_souls.jpg fill
 
 font pango:JetBrainsMonoNerdFont 12

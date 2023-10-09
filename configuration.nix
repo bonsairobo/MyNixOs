@@ -106,54 +106,36 @@
     };
   in
   with pkgs; [
-    acpi
-    bat
+    # Anything that is non-controversial for all users, or used by the desktop
+    # environment.
+
+    # Desktop Env
     bemenu
-    bottom
-    brightnessctl
     configure-gtk
     dbus-sway-environment
-    delta
-    dogdns
-    dracula-theme
-    duf
-    du-dust
-    fd
-    firefox
-    git
     glib
-    gnome3.adwaita-icon-theme
-    gping
-    helix
     i3blocks
-    jq
-    julia-bin
-    lsd
-    lshw
     mako
-    mcfly
-    pamixer
-    pavucontrol
-    pciutils
-    procs
-    ripgrep
-    rustup
-    skim
-    stgit
     swayidle
     swaylock
-    tealdeer
-    tmux
-    vlc
     wayland
     wdisplays
     wev
-    wezterm
-    wget
     wl-clipboard
     xdg-utils
-    xh
-    zoxide
+
+    # Core CLI Tools
+    brightnessctl
+    jq
+    lshw
+    pamixer
+    pavucontrol
+    pciutils
+    wget
+
+    # Apps
+    firefox
+    vlc
   ];
 
   programs.fish.enable = true;
@@ -196,6 +178,7 @@
     jack.enable = true;
   };
 
+  security.polkit.enable = true;
   # RealtimeKit service.
   security.rtkit.enable = true;
 
@@ -220,11 +203,52 @@
   users.users.duncan = {
     isNormalUser = true;
     extraGroups = [ "networkmanager" "video" "wheel" ];
-    packages = with pkgs; [ discord keepassxc playerctl spotify starship syncthing ];
+    packages = with pkgs; [
+      # User-picked software.
+
+      # Desktop
+      dracula-theme
+
+      # CLI tools
+      acpi
+      bat
+      bottom
+      delta
+      dogdns
+      duf
+      du-dust
+      fd
+      git
+      gping
+      helix
+      lsd
+      mcfly
+      procs
+      ripgrep
+      skim
+      starship
+      stgit
+      tealdeer
+      tmux
+      xh
+      zoxide
+
+      # Programming languages
+      julia-bin
+      rustup
+
+      # Apps
+      discord
+      element
+      keepassxc
+      spotify
+      syncthing
+      wezterm
+    ];
     shell = pkgs.fish;
   };
 
-  # Workaround for https://github.com/nix-community/home-manager/issues/2942
+  # Required for flake purity
   home-manager.useGlobalPkgs = true;
 
   home-manager.users.duncan = { lib, pkgs, ... }: {
@@ -237,6 +261,7 @@
     #   source = ./home;
     #   recursive = true;
     # };
+    # Workaround: specify each top-level entry under ./home
     home.file.".config" = {
       source = ./home/.config;
       recursive = true;
