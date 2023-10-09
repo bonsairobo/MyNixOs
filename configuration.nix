@@ -139,6 +139,7 @@
     ripgrep
     rustup
     skim
+    stgit
     swayidle
     swaylock
     tealdeer
