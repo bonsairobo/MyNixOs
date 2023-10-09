@@ -126,7 +126,6 @@
 
     # Core CLI Tools
     brightnessctl
-    jq
     lshw
     pamixer
     pavucontrol
@@ -135,7 +134,6 @@
 
     # Apps
     firefox
-    vlc
   ];
 
   programs.fish.enable = true;
@@ -221,6 +219,7 @@
       git
       gping
       helix
+      jq
       lsd
       mcfly
       procs
@@ -243,6 +242,7 @@
       keepassxc
       spotify
       syncthing
+      vlc
       wezterm
     ];
     shell = pkgs.fish;

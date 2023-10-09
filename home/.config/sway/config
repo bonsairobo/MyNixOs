@@ -184,7 +184,10 @@ bindsym $mod+r mode "resize"
 # Appearance
 #
 
-exec_always dbus-sway-environment
+# Don't execute on sway reloads, because it stops and starts pipewire
+exec dbus-sway-environment
+
+# Just sets some GTK settings, should be idempotent
 exec_always configure-gtk
 
 output * bg /home/duncan/Pictures/wallpapers/adventure_souls.jpg fill
