@@ -1,16 +1,9 @@
 # Goals
 
-This config aims to support programming and gaming while being relatively
-minimal.
-
-The development environment is focused on keyboard and shell usage, centering
-around `fish`, `tmux`, and `helix`. Many modern Unix tools are provided as well.
-
-Remaining desktop usage is also keyboard focused by using a tiling window
-manager.
-
-For gaming, Steam is installed and the `.desktop` file is modified to force
-using NVIDIA PRIME offloading.
+This config aims to support programming and gaming while being minimal,
+responsive, and efficient with laptop battery. The keyboard is emphasized as the
+primary input method for programming and desktop navigation, although the mouse
+and touchpad are still usable when GUIs like browsers make them necessary.
 
 # Installation
 
@@ -34,7 +27,7 @@ Network Manager and `nmcli` are used for networking.
 PipeWire is used for audio, and output devices are configured with
 `pavucontrol` (yes, pulseaudio apps mostly work with pipewire).
 
-## Display
+## Display and Window Management
 
 The Wayland protocol is used by the `sway` compositor + tiling window manager.
 
@@ -44,6 +37,16 @@ The Wayland protocol is used by the `sway` compositor + tiling window manager.
 running `tmux` session, and `fish` is the default shell. The `starship`
 prompt is used to display extra metadata about the current directory or recent
 commands.
+
+## Development Tools
+
+The development environment is focused on keyboard and shell usage, centering
+around `fish`, `tmux`, and `helix`. Many modern Unix tools are provided as well.
+
+## Gaming
+
+For gaming, Steam is installed and the `.desktop` file is modified to force
+using NVIDIA PRIME offloading.
 
 # Compatibility
 
