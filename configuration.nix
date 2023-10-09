@@ -192,7 +192,11 @@
     enable = true;
     alsa.enable = true;
     pulse.enable = true;
+    jack.enable = true;
   };
+
+  # RealtimeKit service.
+  security.rtkit.enable = true;
 
   # xdg-desktop-portal works by exposing a series of D-Bus interfaces
   # known as portals under a well-known name

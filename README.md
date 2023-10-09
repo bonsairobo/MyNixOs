@@ -31,8 +31,8 @@ Network Manager and `nmcli` are used for networking.
 
 ## Audio
 
-PipeWire + PulseAudio are used for audio, and output devices are configured with
-`pavucontrol`.
+PipeWire is used for audio, and output devices are configured with
+`pavucontrol` (yes, pulseaudio apps mostly work with pipewire).
 
 # Compatibility
 
