@@ -24,10 +24,6 @@ end
 
 # Aliases
 
-function dotconf --wraps git --description "Alias for git, targeting ~/.dotfiles repo"
-    git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME $argv
-end
-
 alias ls='lsd'
 
 # McFly history search
