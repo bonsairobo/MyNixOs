@@ -115,8 +115,10 @@
       dbus-sway-environment
       fuzzel
       glib
+      grim
       i3blocks
       mako
+      slurp
       swayidle
       swaylock
       wayland
