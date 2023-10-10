@@ -237,6 +237,7 @@
       stgit
       tealdeer
       tmux
+      tokei
       xh
       zoxide
 
