@@ -253,13 +253,16 @@
       mold
 
       # Apps
-      discord
       element
       keepassxc
       spotify
       syncthing
       vlc
       wezterm
+
+      # Bring it back when screen sharing works. Currently using Discord from
+      # Firefox as a workaround.
+      # discord
     ];
     shell = pkgs.fish;
   };
