@@ -240,6 +240,9 @@
       # Programming languages
       julia-bin
 
+      # Nix
+      alejandra
+
       # Rust
       rustup
       clang
