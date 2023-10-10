@@ -139,6 +139,9 @@
   programs.fish.enable = true;
   programs.light.enable = true;
 
+  # Hint electron apps to use Wayland
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
+
   # Sway Wayland compositor
   programs.sway = {
     enable = true;
@@ -174,6 +177,7 @@
     alsa.enable = true;
     pulse.enable = true;
     jack.enable = true;
+    wireplumber.enable = true;
   };
 
   security.polkit.enable = true;
