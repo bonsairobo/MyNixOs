@@ -140,10 +140,6 @@
     ];
 
   programs.fish.enable = true;
-  programs.git = {
-    enable = true;
-    lfs.enable = true;
-  };
   programs.light.enable = true;
 
   # Hint electron apps to use Wayland
@@ -279,6 +275,11 @@
   }: {
     # The home.stateVersion option does not have a default and must be set
     home.stateVersion = "18.09";
+
+    programs.git = {
+      enable = true;
+      lfs.enable = true;
+    };
 
     # Link all configuration files (dotfiles) into home.
     # Strangely, this does not work: https://github.com/nix-community/home-manager/issues/3849
