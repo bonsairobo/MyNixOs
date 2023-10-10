@@ -1,10 +1,12 @@
 # Edit this configuration file to define what should be installed on
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
-
-{ config, home-manager, pkgs, ... }:
-
 {
+  config,
+  home-manager,
+  pkgs,
+  ...
+}: {
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system, were taken. It's perfectly fine and recommended to leave
@@ -15,12 +17,12 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      # Home manager
-      (import "${home-manager}/nixos")
-    ];
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    # Home manager
+    (import "${home-manager}/nixos")
+  ];
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
@@ -32,7 +34,7 @@
   #
 
   # Enable AMD iGPU early in the boot process
-  boot.initrd.kernelModules = [ "amdgpu" ];
+  boot.initrd.kernelModules = ["amdgpu"];
   hardware.nvidia = {
     # Drivers must be at version 525 or newer
     package = config.boot.kernelPackages.nvidiaPackages.beta;
@@ -50,10 +52,10 @@
   };
   # Weird that "xserver" is here when we are using Wayland. But this is required
   # to install the NVIDIA driver.
-  services.xserver.videoDrivers = [ "nvidia" ];
+  services.xserver.videoDrivers = ["nvidia"];
 
   networking.hostName = "duncan-nixos"; # Define your hostname.
-  networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
+  networking.networkmanager.enable = true; # Easiest to use and most distros use this by default.
 
   time.timeZone = "America/Los_Angeles";
 
@@ -66,8 +68,7 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages =
-  let 
+  environment.systemPackages = let
     # bash script to let dbus know about important env variables and
     # propagate them to relevent services run at the end of sway config
     # see
@@ -105,36 +106,36 @@
       '';
     };
   in
-  with pkgs; [
-    # Anything that is non-controversial for all users, or used by the desktop
-    # environment.
+    with pkgs; [
+      # Anything that is non-controversial for all users, or used by the desktop
+      # environment.
 
-    # Desktop Env
-    configure-gtk
-    dbus-sway-environment
-    fuzzel
-    glib
-    i3blocks
-    mako
-    swayidle
-    swaylock
-    wayland
-    wdisplays
-    wev
-    wl-clipboard
-    xdg-utils
+      # Desktop Env
+      configure-gtk
+      dbus-sway-environment
+      fuzzel
+      glib
+      i3blocks
+      mako
+      swayidle
+      swaylock
+      wayland
+      wdisplays
+      wev
+      wl-clipboard
+      xdg-utils
 
-    # Core CLI Tools
-    brightnessctl
-    lshw
-    pamixer
-    pavucontrol
-    pciutils
-    wget
+      # Core CLI Tools
+      brightnessctl
+      lshw
+      pamixer
+      pavucontrol
+      pciutils
+      wget
 
-    # Apps
-    firefox
-  ];
+      # Apps
+      firefox
+    ];
 
   programs.fish.enable = true;
   programs.light.enable = true;
@@ -163,7 +164,7 @@
     noto-fonts
     noto-fonts-cjk
     noto-fonts-emoji
-    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+    (nerdfonts.override {fonts = ["JetBrainsMono"];})
   ];
 
   #
@@ -194,7 +195,7 @@
     enable = true;
     wlr.enable = true;
     # gtk portal needed to make gtk apps happy
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    extraPortals = [pkgs.xdg-desktop-portal-gtk];
   };
 
   #
@@ -204,7 +205,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.duncan = {
     isNormalUser = true;
-    extraGroups = [ "networkmanager" "video" "wheel" ];
+    extraGroups = ["networkmanager" "video" "wheel"];
     packages = with pkgs; [
       # User-picked software.
 
@@ -259,7 +260,11 @@
   # Required for flake purity
   home-manager.useGlobalPkgs = true;
 
-  home-manager.users.duncan = { lib, pkgs, ... }: {
+  home-manager.users.duncan = {
+    lib,
+    pkgs,
+    ...
+  }: {
     # The home.stateVersion option does not have a default and must be set
     home.stateVersion = "18.09";
 
@@ -292,4 +297,3 @@
     '';
   };
 }
-
