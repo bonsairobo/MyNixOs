@@ -255,7 +255,7 @@
       mold
 
       # Apps
-      element
+      element-desktop
       keepassxc
       spotify
       syncthing
