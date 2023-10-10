@@ -38,3 +38,5 @@ zoxide init fish | source
 
 # Shell prompt
 starship init fish | source
+
+direnv hook fish | source

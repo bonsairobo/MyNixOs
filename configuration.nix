@@ -276,9 +276,18 @@
     # The home.stateVersion option does not have a default and must be set
     home.stateVersion = "18.09";
 
-    programs.git = {
-      enable = true;
-      lfs.enable = true;
+    programs = {
+      # My solution for this:
+      # https://nixos.wiki/wiki/FAQ/I_installed_a_library_but_my_compiler_is_not_finding_it._Why%3F
+      direnv = {
+        enable = true;
+        enableFishIntegration = true;
+        nix-direnv.enable = true;
+      };
+      git = {
+        enable = true;
+        lfs.enable = true;
+      };
     };
 
     # Link all configuration files (dotfiles) into home.
