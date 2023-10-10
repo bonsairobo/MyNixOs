@@ -138,6 +138,10 @@
     ];
 
   programs.fish.enable = true;
+  programs.git = {
+    enable = true;
+    lfs.enable = true;
+  };
   programs.light.enable = true;
 
   # Hint electron apps to use Wayland
@@ -221,7 +225,6 @@
       duf
       du-dust
       fd
-      git
       gping
       helix
       jq
