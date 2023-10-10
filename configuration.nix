@@ -110,9 +110,9 @@
     # environment.
 
     # Desktop Env
-    bemenu
     configure-gtk
     dbus-sway-environment
+    fuzzel
     glib
     i3blocks
     mako
