@@ -254,6 +254,13 @@
       clang
       mold
 
+      # Common dependencies for Rust projects.
+      # TODO: move these into a project-local nix-env?
+      alsa-lib
+      openssl
+      pkg-config
+      systemd
+
       # Apps
       element-desktop
       keepassxc
