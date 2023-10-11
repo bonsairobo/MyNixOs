@@ -288,6 +288,8 @@
         enable = true;
         lfs.enable = true;
       };
+      # Currently just trying this out, not making it my default yet.
+      nushell.enable = true;
     };
 
     # Link all configuration files (dotfiles) into home.
