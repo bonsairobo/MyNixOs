@@ -43,10 +43,39 @@ commands.
 The development environment is focused on keyboard and shell usage, centering
 around `fish`, `tmux`, and `helix`. Many modern Unix tools are provided as well.
 
+## Dotfile Management
+
+All dotfiles live in `home/`. They get symlinked into `~/.config` during
+install. They will be read-only at this point, so if you need to do some
+quick experiments, it is easiest to do:
+
+```sh
+mv $some_file "$some_file.bak"
+cp "$some_file.bak" $some_file
+chmod +w $some_file
+# ... make your changes
+```
+
+before finalizing the changes in this repo.
+
 ## Gaming
 
 For gaming, Steam is installed and the `.desktop` file is modified to force
 using NVIDIA PRIME offloading.
+
+## Rust Development
+
+This config is mostly catered to writing Rust code. There are only a few ways
+that this is different on NixOS:
+
+- Only rustup is installed via `home-manager`. Toolchains are managed as usual.
+- When building crates that have external dependencies (e.g. openssl), you must
+  use `nix-shell` to install those dependencies and make them visible to `pkg-
+  config`. Normally these dependencies are tracked with a `shell.nix` file
+  inside of the crate directory. Rather than doing this with raw `nix- shell`
+  invocations, we use nix-direnv. This has the advantage of automatically
+  augmenting the environment when you navigate into a crate directory. See [the
+  instructions](https://github.com/nix-community/nix-direnv).
 
 # Compatibility
 
