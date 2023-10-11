@@ -11,3 +11,8 @@ features = "all"
 name = "markdown"
 language-server = { command = "/home/duncan/.cargo/bin/mdpls" }
 config = { markdown.preview.auto = true, markdown.preview.browser = "firefox" }
+
+[[language]]
+name = "nix"
+formatter = { command = "alejandra" }
+auto-format = true

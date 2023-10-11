@@ -243,6 +243,7 @@
       julia-bin
 
       # Nix
+      nil
       alejandra
 
       # Rust
