@@ -201,6 +201,27 @@
   };
 
   #
+  # Virtualization and Containers
+  #
+
+  # Containers are particularly useful as a last resort for getting software to
+  # run on NixOS. Sometimes life gives you assholes that download precompiled
+  # ELF binaries onto your system.
+  virtualisation = {
+    podman = {
+      enable = true;
+
+      # Create a `docker` alias for podman, to use it as a drop-in replacement
+      dockerCompat = true;
+
+      # Required for containers under podman-compose to be able to talk to each other.
+      defaultNetwork.settings = {
+        dns_enabled = true;
+      };
+    };
+  };
+
+  #
   # User-Specific Config
   #
 
