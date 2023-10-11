@@ -7,10 +7,22 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs @ {nixpkgs, ...}: {
+  outputs = inputs @ {
+    nixpkgs,
+    home-manager,
+    ...
+  }: {
     nixosConfigurations.duncan-nixos = nixpkgs.lib.nixosSystem {
       modules = [
         ./configuration.nix
+
+        home-manager.nixosModules.home-manager
+        {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+
+          home-manager.users.duncan = import ./home.nix;
+        }
       ];
       specialArgs = inputs;
     };
