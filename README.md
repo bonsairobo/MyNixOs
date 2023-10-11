@@ -70,12 +70,12 @@ that this is different on NixOS:
 
 - Only rustup is installed via `home-manager`. Toolchains are managed as usual.
 - When building crates that have external dependencies (e.g. openssl), you must
-  use `nix-shell` to install those dependencies and make them visible to `pkg-
-  config`. Normally these dependencies are tracked with a `shell.nix` file
-  inside of the crate directory. Rather than doing this with raw `nix- shell`
-  invocations, we use nix-direnv. This has the advantage of automatically
-  augmenting the environment when you navigate into a crate directory. See [the
-  instructions](https://github.com/nix-community/nix-direnv).
+  use `nix-shell` to install those dependencies and make them visible to `pkg-config`.
+  Normally these dependencies are tracked with a `shell.nix` file inside of
+  the crate directory. Rather than doing this with raw `nix-shell` invocations,
+  we use nix-direnv. This has the advantage of automatically augmenting the
+  environment when you navigate into a crate directory. See [the instructions]
+  (https://github.com/nix-community/nix-direnv).
 
 # Compatibility
 
