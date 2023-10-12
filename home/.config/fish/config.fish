@@ -26,6 +26,10 @@ end
 
 fish_add_path ~/.cargo/bin
 
+# Variables
+
+set -g EDITOR 'hx'
+
 # Aliases
 
 alias ls='lsd'

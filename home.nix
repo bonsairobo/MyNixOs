@@ -38,7 +38,6 @@
     duf
     du-dust
     fd
-    helix
     jq
     lsd
     ripgrep
@@ -93,6 +92,7 @@
       enable = true;
       lfs.enable = true;
     };
+    helix.enable = true;
     # Currently just trying this out, not making it my default yet.
     nushell.enable = true;
   };
