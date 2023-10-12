@@ -28,6 +28,7 @@
     xh
 
     # Shell
+    lineselect
     mcfly
     starship
     tealdeer
