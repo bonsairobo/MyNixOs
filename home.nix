@@ -70,6 +70,7 @@
     audacity
     element-desktop
     keepassxc
+    obs-studio
     spotify
     syncthing
     vlc
