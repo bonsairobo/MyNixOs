@@ -13,29 +13,46 @@
     # User-picked software.
 
     # CLI tools
-    acpi
-    bat
+
+    # Monitoring
     bottom
-    delta
+    procs
+    sysstat
+
+    # Networking
     dogdns
+    gping
+    iperf3
+    nmap
+    wireshark
+    xh
+
+    # Shell
+    mcfly
+    starship
+    tealdeer
+
+    # File system
+    bat
+    delta
     duf
     du-dust
     fd
-    gping
     helix
     jq
     lsd
-    mcfly
-    procs
     ripgrep
     skim
-    starship
     stgit
-    tealdeer
     tmux
     tokei
-    xh
     zoxide
+
+    # Archives
+    p7zip
+    unzip
+    xz
+    zip
 
     # Programming languages
     julia-bin
@@ -50,6 +67,7 @@
     mold
 
     # Apps
+    audacity
     element-desktop
     keepassxc
     spotify

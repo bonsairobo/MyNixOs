@@ -109,6 +109,18 @@
       # Anything that is non-controversial for all users, or used by the desktop
       # environment.
 
+      # Networking
+      curl
+      wget
+
+      # Hardware tools
+      acpi
+      brightnessctl
+      lshw
+      pamixer
+      pavucontrol
+      pciutils
+
       # Desktop Env
       configure-gtk
       dbus-sway-environment
@@ -126,14 +138,6 @@
       wev
       wl-clipboard
       xdg-utils
-
-      # Core CLI Tools
-      brightnessctl
-      lshw
-      pamixer
-      pavucontrol
-      pciutils
-      wget
 
       # Apps
       firefox
