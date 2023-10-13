@@ -121,6 +121,9 @@
       pavucontrol
       pciutils
 
+      # Virtualization
+      podman-compose
+
       # Desktop Env
       configure-gtk
       dbus-sway-environment
