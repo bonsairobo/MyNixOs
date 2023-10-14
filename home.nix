@@ -69,6 +69,7 @@
     # Apps
     audacity
     element-desktop
+    kdenlive
     keepassxc
     obs-studio
     spotify
