@@ -67,6 +67,7 @@
     mold
 
     # Apps
+    appimage-run
     audacity
     element-desktop
     kdenlive
