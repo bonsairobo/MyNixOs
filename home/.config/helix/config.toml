@@ -1,6 +1,10 @@
 theme = "downtown_funk"
 
-editor.true-color = true
+[editor]
+true-color = true
+undercurl = true
+cursorline = true
+color-modes = true
 
 [editor.cursor-shape]
 insert = "bar"
@@ -8,7 +12,7 @@ normal = "block"
 select = "underline"
 
 [editor.statusline]
-left = ["mode", "file-name", "version-control"]
+left = ["mode", "spinner", "file-name", "version-control"]
 
 [editor.soft-wrap]
 enable = true
