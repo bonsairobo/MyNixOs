@@ -10,5 +10,9 @@ select = "underline"
 [editor.statusline]
 left = ["mode", "file-name", "version-control"]
 
+[editor.soft-wrap]
+enable = true
+
 [keys.normal]
 D = "delete_selection_noyank"
+
