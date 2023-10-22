@@ -205,6 +205,14 @@ bar {
 include /etc/sway/config.d/*
 
 #
+# Startup Apps and Layout
+#
+
+# Exec in workspace 1 last, because firefox's "open previous windows" feature
+# will race with workspace commands.
+exec --no-startup-id swaymsg 'workspace 3, exec wezterm; workspace 1, layout tabbed, exec firefox, exec spotify'
+
+#
 # Below may be hardware specific
 #
 # TODO: extract into a file to be "include"ed
