@@ -9,6 +9,10 @@ command=acpi
 label=⚡
 interval=30
 
+[ssid]
+command=~/.config/i3blocks/ssid.sh
+interval=60
+
 [time]
 command=date '+%m-%d %H:%M'
 interval=30

@@ -109,6 +109,7 @@
 
       # Networking
       curl
+      iw
       wget
 
       # Hardware tools
