@@ -34,6 +34,25 @@ set -g EDITOR 'hx'
 
 alias ls='lsd'
 
+function tryedit -d "Make a file writable in-place while creating a backup"
+    set -l f $argv[1]
+
+    # Make sure the backup is identical to the original, including permissions.
+    mv $f $f.bak
+    # This should follow symlinks.
+    cp $f.bak $f
+    chmod +w $f
+end
+
+function untryedit -d "Restore from a backup created by tryedit"
+    set -l f $argv[1]
+
+    if test -e $f.bak
+        rm $f
+        mv $f.bak $f
+    end
+end
+
 # McFly history search
 mcfly init fish | source
 
