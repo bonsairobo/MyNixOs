@@ -27,15 +27,30 @@ exec swayidle -w before-sleep 'swaylock -f --image $wallpaper'
 
 assign [title="Spotify"] workspace 1
 
-# Use a little Firefox magic (profiles and --new-instance) to make sure Discord
-# opens on Workspace 1, while the default Firefox profile (with all of the
-# previous tabs and windows restored) opens on Workspace 2. Exec in workspace
-# 2 last, because Firefox's "open previous windows" feature will race with
-# workspace commands.
-# TODO: persist the profiles in Nix config somehow
+# Hold on to your broomsticks. Customizing the way that Firefox starts up across
+# multiple workspaces is black magic.
+#
+# Background: Firefox is installed by home-manager, which allows us to configure
+# "profiles," each of which contains settings and state like the previous
+# session. We have a default "browsing" profile and a separate "discord" profile
+# for reasons explained below.
+#
+# Goal: Have Discord open in its own window in workspace 1, while the rest of
+# our windows/tabs open in workspace 2.
+#
+# When Firefox restores a previous session, those windows open out of sync with
+# the swaymsg commands that switch between workspaces. Since we want to place
+# some windows in different workspaces, we need to isolate instances of Firefox
+# so sway's "startup-id" mechanism can function properly.
+#
+# By executing a new instance with a dedicated profile for Discord, we guarantee
+# that only one window is spawned in workspace 1. Since we may spawn multiple
+# windows from the "browsing" profile in workspace 2, we do this last so as long
+# as the user doesn't quickly switch workspaces while the windows are spawning,
+# they will all go to workspace 2.
 exec --no-startup-id swaymsg \
     'workspace 3, exec $term;\
-    workspace 1, layout tabbed, exec spotify, exec firefox --new-instance -P Discord "https://discord.com/app";\
+    workspace 1, layout tabbed, exec spotify, exec firefox --new-instance -P discord;\
     workspace 2, layout tabbed, exec firefox'
 
 #

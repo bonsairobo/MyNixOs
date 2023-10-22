@@ -139,9 +139,6 @@
       wev
       wl-clipboard
       xdg-utils
-
-      # Apps
-      firefox
     ];
 
   # This must be done at the system level because only root can set a user's

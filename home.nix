@@ -4,7 +4,7 @@
   ...
 }: {
   # The home.stateVersion option does not have a default and must be set
-  home.stateVersion = "18.09";
+  home.stateVersion = "23.05";
 
   home.username = "duncan";
   home.homeDirectory = "/home/duncan";
@@ -93,6 +93,43 @@
       enable = true;
       enableFishIntegration = true;
       nix-direnv.enable = true;
+    };
+    firefox = {
+      enable = true;
+      package = pkgs.wrapFirefox pkgs.firefox-unwrapped {
+        extraPolicies = {
+          CaptivePortal = true;
+          DisableFirefoxStudies = true;
+          DisablePocket = true;
+          DisableTelemetry = true;
+          DisableFirefoxAccounts = true;
+          NoDefaultBookmarks = true;
+          OfferToSaveLogins = false;
+          OfferToSaveLoginsDefault = false;
+          PasswordManagerEnabled = false;
+          FirefoxHome = {
+            Search = true;
+            Pocket = false;
+            Snippets = false;
+            TopSites = false;
+            Highlights = false;
+          };
+          UserMessaging = {
+            ExtensionRecommendations = false;
+            SkipOnboarding = true;
+          };
+        };
+      };
+      profiles = {
+        browsing = {
+          id = 0;
+          isDefault = true;
+        };
+
+        discord = {
+          id = 1;
+        };
+      };
     };
     git = {
       enable = true;
