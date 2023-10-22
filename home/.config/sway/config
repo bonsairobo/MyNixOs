@@ -45,13 +45,14 @@ assign [title="Spotify"] workspace 1
 #
 # By executing a new instance with a dedicated profile for Discord, we guarantee
 # that only one window is spawned in workspace 1. Since we may spawn multiple
-# windows from the "browsing" profile in workspace 2, we do this last so as long
+# windows from the "browsing" profile in workspace 3, we do this last so as long
 # as the user doesn't quickly switch workspaces while the windows are spawning,
-# they will all go to workspace 2.
+# they will all go to workspace 3.
 exec --no-startup-id swaymsg \
-    'workspace 3, exec $term;\
+    'workspace 4, exec $term;\
     workspace 1, layout tabbed, exec spotify, exec firefox --new-instance -P discord;\
-    workspace 2, layout tabbed, exec firefox'
+    workspace 2, layout tabbed, exec firefox --new-instance -P work;\
+    workspace 3, layout tabbed, exec firefox --new-instance -P browsing;'
 
 #
 # Configure DBus

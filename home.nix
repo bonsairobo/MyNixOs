@@ -9,6 +9,11 @@
   home.username = "duncan";
   home.homeDirectory = "/home/duncan";
 
+  home.sessionVariables = {
+    MOZ_ENABLE_WAYLAND = 1;
+    XDG_CURRENT_DESKTOP = "sway";
+  };
+
   home.packages = with pkgs; [
     # User-picked software.
 
@@ -125,9 +130,11 @@
           id = 0;
           isDefault = true;
         };
-
         discord = {
           id = 1;
+        };
+        work = {
+          id = 2;
         };
       };
     };
