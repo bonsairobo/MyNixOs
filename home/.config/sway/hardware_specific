@@ -19,9 +19,10 @@ input "type:touchpad" {
 #
 # Media Keys
 #
-bindsym XF86AudioMute exec pamixer --toggle-mute
-bindsym XF86AudioLowerVolume exec pamixer -d 5
-bindsym XF86AudioRaiseVolume exec pamixer -i 5
+set $refresh_blocks pkill -SIGRTMIN+10 i3blocks
+bindsym XF86AudioMute exec pamixer --toggle-mute; exec $refresh_blocks
+bindsym XF86AudioLowerVolume exec pamixer -d 5; exec $refresh_blocks
+bindsym XF86AudioRaiseVolume exec pamixer -i 5; exec $refresh_blocks
 
 #
 # Brightness

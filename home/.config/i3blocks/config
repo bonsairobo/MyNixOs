@@ -1,3 +1,9 @@
+[volume]
+command=~/.config/i3blocks/volume.sh
+interval=0
+# Signal is sent by sway volume key bindings
+signal=10
+
 [battery]
 command=acpi
 label=⚡
