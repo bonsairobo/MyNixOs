@@ -39,6 +39,7 @@
     duf
     du-dust
     fd
+    file
     jq
     lsd
     ripgrep
