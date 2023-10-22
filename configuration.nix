@@ -139,6 +139,9 @@
       wev
       wl-clipboard
       xdg-utils
+
+      # Hardware-specific
+      asusctl
     ];
 
   # This must be done at the system level because only root can set a user's
@@ -206,6 +209,9 @@
       CPU_MAX_PERF_ON_BAT = 50;
     };
   };
+
+  # Hardware-specific
+  services.asusd.enable = true;
 
   security.polkit.enable = true;
   # RealtimeKit service.
