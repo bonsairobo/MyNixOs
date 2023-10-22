@@ -34,6 +34,7 @@
     tealdeer
 
     # File system
+    amber
     bat
     delta
     duf
