@@ -31,6 +31,16 @@ PipeWire is used for audio, and output devices are configured with
 
 The Wayland protocol is used by the `sway` compositor + tiling window manager.
 
+### Startup Apps
+
+When `sway` starts a new session, it spawns a default set of applications into
+specific workspaces:
+
+1. Spotify + Discord
+1. Firefox: "work" profile
+1. Firefox: "browsing" profile
+1. $TERM
+
 ## Terminal and Shell
 
 `wezterm` is the default terminal emulator. `fish` is the default shell. On
