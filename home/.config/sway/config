@@ -25,9 +25,18 @@ exec swayidle -w before-sleep 'swaylock -f --image $wallpaper'
 # Startup Apps and Layout
 #
 
-# Exec in workspace 1 last, because firefox's "open previous windows" feature
-# will race with workspace commands.
-exec --no-startup-id swaymsg 'workspace 3, exec $term; workspace 1, layout tabbed, exec firefox, exec spotify'
+assign [title="Spotify"] workspace 1
+
+# Use a little Firefox magic (profiles and --new-instance) to make sure Discord
+# opens on Workspace 1, while the default Firefox profile (with all of the
+# previous tabs and windows restored) opens on Workspace 2. Exec in workspace
+# 2 last, because Firefox's "open previous windows" feature will race with
+# workspace commands.
+# TODO: persist the profiles in Nix config somehow
+exec --no-startup-id swaymsg \
+    'workspace 3, exec $term;\
+    workspace 1, layout tabbed, exec spotify, exec firefox --new-instance -P Discord "https://discord.com/app";\
+    workspace 2, layout tabbed, exec firefox'
 
 #
 # Configure DBus
