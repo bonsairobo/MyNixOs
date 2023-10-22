@@ -136,6 +136,9 @@
         work = {
           id = 2;
         };
+        local_server = {
+          id = 3;
+        };
       };
     };
     git = {
