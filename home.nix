@@ -66,6 +66,9 @@
     clang
     mold
 
+    # Markdown
+    mdpls
+
     # Apps
     appimage-run
     audacity

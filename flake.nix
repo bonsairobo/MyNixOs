@@ -11,8 +11,23 @@
     nixpkgs,
     home-manager,
     ...
-  }: {
+  }: let
+    system = "x86_64-linux";
+
+    # Redefine pkgs to include custom packages from the "./packages" directory.
+    pkgs = import nixpkgs {
+      system = system;
+      config = {allowUnfree = true;};
+      overlays = [
+        (final: prev: {
+          mdpls = final.callPackage ./packages/mdpls {};
+        })
+      ];
+    };
+  in {
     nixosConfigurations.duncan-nixos = nixpkgs.lib.nixosSystem {
+      inherit system pkgs;
+
       modules = [
         ./configuration.nix
 

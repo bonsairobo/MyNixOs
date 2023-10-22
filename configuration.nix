@@ -16,8 +16,6 @@
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
-  nixpkgs.config.allowUnfree = true;
-
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
