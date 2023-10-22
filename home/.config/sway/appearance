@@ -1,0 +1,23 @@
+# Just sets some GTK settings, should be idempotent
+exec_always configure-gtk
+
+output * bg $wallpaper fill
+
+font pango:JetBrainsMonoNerdFont 12
+
+#
+# Status Bar:
+#
+# Read `man 5 sway-bar` for more information about this section.
+bar {
+    position bottom
+
+    status_command i3blocks
+
+    colors {
+        statusline #ffffff
+        background #323232
+        inactive_workspace #32323200 #32323200 #5c5c5c
+    }
+}
+
