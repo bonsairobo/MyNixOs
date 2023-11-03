@@ -64,6 +64,9 @@
     # Media
     ffmpeg
 
+    # Version control
+    lazygit
+
     # Programming languages
     julia-bin
 
