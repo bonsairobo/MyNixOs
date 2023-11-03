@@ -20,7 +20,7 @@
     # CLI tools
 
     # Monitoring
-    bottom
+    btop
     procs
     sysstat
 
