@@ -61,6 +61,9 @@
     xz
     zip
 
+    # Media
+    ffmpeg
+
     # Programming languages
     julia-bin
 
