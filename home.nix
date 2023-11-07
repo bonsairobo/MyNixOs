@@ -23,6 +23,7 @@
     btop
     procs
     sysstat
+    tracy
 
     # Networking
     dogdns
