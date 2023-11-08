@@ -75,11 +75,6 @@
     nil
     alejandra
 
-    # Rust
-    rustup
-    clang
-    mold
-
     # Markdown
     mdpls
 
