@@ -15,7 +15,7 @@ label=📡
 interval=60
 
 [time]
-command=date '+%c'
+command=date "+%a %d %b %Y %I:%M %p %Z"
 label=🗓️
 interval=30
 
