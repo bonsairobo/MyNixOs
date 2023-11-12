@@ -64,6 +64,7 @@
 
     # Media
     ffmpeg
+    ktx-tools
 
     # Version control
     lazygit

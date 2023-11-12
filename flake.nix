@@ -20,6 +20,7 @@
       config = {allowUnfree = true;};
       overlays = [
         (final: prev: {
+          ktx-tools = final.callPackage ./packages/ktx-tools {};
           mdpls = final.callPackage ./packages/mdpls {};
         })
       ];
