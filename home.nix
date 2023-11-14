@@ -63,6 +63,7 @@
     zip
 
     # Media
+    basis-universal
     ffmpeg
     ktx-tools
 

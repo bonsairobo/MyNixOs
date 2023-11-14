@@ -16,7 +16,7 @@ stdenv.mkDerivation rec {
     owner = "KhronosGroup";
     repo = "KTX-Software";
     rev = "v${version}";
-    sha256 = "sha256-P44N2ff+3xBwQ3waAIY2c6uANZC4hSdQdSAzyNaBGbs=";
+    hash = "sha256-P44N2ff+3xBwQ3waAIY2c6uANZC4hSdQdSAzyNaBGbs=";
   };
 
   nativeBuildInputs = [

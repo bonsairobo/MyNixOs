@@ -20,6 +20,7 @@
       config = {allowUnfree = true;};
       overlays = [
         (final: prev: {
+          basis-universal = final.callPackage ./packages/basis-universal {enableSse = true;};
           ktx-tools = final.callPackage ./packages/ktx-tools {};
           mdpls = final.callPackage ./packages/mdpls {};
         })
