@@ -21,6 +21,7 @@
 
     # Monitoring
     btop
+    linuxPackages_latest.perf
     procs
     sysstat
     tracy
