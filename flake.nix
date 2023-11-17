@@ -23,6 +23,7 @@
           basis-universal = final.callPackage ./packages/basis-universal {enableSse = true;};
           ktx-tools = final.callPackage ./packages/ktx-tools {};
           mdpls = final.callPackage ./packages/mdpls {};
+          wgsl-analyzer = final.callPackage ./packages/wgsl-analyzer {};
         })
       ];
     };

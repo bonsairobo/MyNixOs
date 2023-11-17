@@ -73,6 +73,7 @@
 
     # Programming languages
     julia-bin
+    wgsl-analyzer
 
     # Nix
     nil
