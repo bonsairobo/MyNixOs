@@ -29,3 +29,7 @@
 # Foresight stuff
 [url "ssh://git@github.com/ForesightMiningSoftwareCorporation"]
 	insteadOf = https://github.com/ForesightMiningSoftwareCorporation
+[url "ssh://git@github.com/"]
+    insteadOf = https://github.com/
+[url "ssh://git@github.com/"]
+    insteadOf = https://git@github.com/
