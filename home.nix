@@ -31,6 +31,7 @@
     gping
     iperf3
     nmap
+    qbittorrent
     wireshark
     xh
 
