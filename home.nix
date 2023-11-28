@@ -70,6 +70,7 @@
     ktx-tools
 
     # Version control
+    gh
     lazygit
 
     # Programming languages
