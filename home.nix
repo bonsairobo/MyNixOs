@@ -87,6 +87,7 @@
     # Apps
     appimage-run
     audacity
+    blender
     element-desktop
     kdenlive
     keepassxc
