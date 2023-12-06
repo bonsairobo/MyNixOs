@@ -89,6 +89,7 @@
     audacity
     blender
     element-desktop
+    gimp
     kdenlive
     keepassxc
     obs-studio
