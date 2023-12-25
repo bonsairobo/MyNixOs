@@ -1,18 +1,22 @@
 [[language]]
 name = "rust"
 
-[language.config.check]
-command = "clippy"
-
-[language.config.cargo]
-features = "all"
-
 [[language]]
 name = "markdown"
-language-server = { command = "mdpls" }
-config = { markdown.preview.auto = true, markdown.preview.browser = ["firefox", "-P", "local_server"] }
+language-servers = ["mdpls"]
 
 [[language]]
 name = "nix"
 formatter = { command = "alejandra" }
 auto-format = true
+
+[language-server.rust-analyzer.config]
+cargo.features = "all"
+check.command = "clippy"
+
+[language-server.mdpls]
+command = "mdpls"
+
+[language-server.mdpls.config]
+markdown.preview.auto = true
+markdown.preview.browser = ["firefox", "-P", "local_server"]
