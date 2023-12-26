@@ -73,6 +73,9 @@
     gh
     lazygit
 
+    # SDKs
+    cudatoolkit
+
     # Programming languages
     julia-bin
     wgsl-analyzer
@@ -87,7 +90,10 @@
     # Apps
     appimage-run
     audacity
-    blender
+    # blender
+    (blender.override {
+      cudaSupport = true;
+    })
     element-desktop
     gimp
     kdenlive
