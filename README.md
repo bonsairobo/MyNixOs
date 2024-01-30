@@ -44,9 +44,8 @@ specific workspaces:
 ## Terminal and Shell
 
 `wezterm` is the default terminal emulator. `fish` is the default shell. On
-start, `fish` connects to any running `tmux` session. The `starship` prompt is
-used to display extra metadata about the current directory or recent commands.
-`nu` is also available for specific tasks.
+start, `fish` connects to any running `tmux` session. `nu` is also available for
+specific tasks.
 
 ## Development Tools
 

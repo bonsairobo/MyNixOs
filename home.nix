@@ -38,7 +38,8 @@
     # Shell
     lineselect
     mcfly
-    starship
+    # Sadly, starship is pretty slow in large git repos.
+    # starship
     tealdeer
 
     # File system

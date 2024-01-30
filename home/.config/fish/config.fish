@@ -60,6 +60,9 @@ mcfly init fish | source
 zoxide init fish | source
 
 # Shell prompt
-starship init fish | source
+#
+# Disabled for being slow in large Git repos
+#
+# starship init fish | source
 
 direnv hook fish | source
