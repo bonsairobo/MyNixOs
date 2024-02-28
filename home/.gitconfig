@@ -26,6 +26,9 @@
 [diff]
 	colorMoved = default
 
+[stgit.alias]
+	s = series -I
+
 # Foresight stuff
 [url "ssh://git@github.com/ForesightMiningSoftwareCorporation"]
 	insteadOf = https://github.com/ForesightMiningSoftwareCorporation
