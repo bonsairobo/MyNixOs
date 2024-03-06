@@ -28,6 +28,7 @@
 
 [stgit.alias]
 	s = series -I
+	r = refresh
 
 # Foresight stuff
 [url "ssh://git@github.com/ForesightMiningSoftwareCorporation"]
