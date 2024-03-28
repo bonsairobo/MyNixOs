@@ -65,6 +65,9 @@
     xz
     zip
 
+    # Databases
+    litecli
+
     # Media
     basis-universal
     ffmpeg
