@@ -86,7 +86,7 @@
 
     # Nix
     nil
-    alejandra
+    nixfmt-rfc-style
 
     # Markdown
     mdpls
