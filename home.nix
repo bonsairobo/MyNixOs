@@ -71,7 +71,7 @@
     # Media
     basis-universal
     ffmpeg
-    ktx-tools
+    # ktx-tools
 
     # Version control
     gh
