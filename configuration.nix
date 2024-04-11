@@ -191,6 +191,20 @@
     jack.enable = true;
     wireplumber.enable = true;
   };
+  # Only for testing; this service is not secure enough for running anything
+  # in production!
+  services.postgresql = {
+    enable = true;
+    authentication = pkgs.lib.mkOverride 10 ''
+      local all all        trust
+      host  all test ::1/0 trust
+    '';
+    initialScript = pkgs.writeText "pgsql-init-script" ''
+      CREATE ROLE test WITH SUPERUSER LOGIN;
+      CREATE DATABASE test;
+    '';
+    enableTCPIP = true;
+  };
 
   # Laptop-specific
   services.tlp = {
