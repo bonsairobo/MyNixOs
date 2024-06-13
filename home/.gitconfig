@@ -40,7 +40,7 @@
 
 # StackedGit
 [stgit.alias]
-	s = series -I
+	s = series -I -d
 	r = refresh
 
 # Foresight stuff
